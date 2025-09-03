@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Napastry - Fresh & Sweet Pastry with Pineapple</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .nav-transition {
+            transition: all 0.3s ease;
+        }
+        .btn-hover {
+            transition: all 0.3s ease;
+        }
+        .btn-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(234, 179, 8, 0.3);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body class="bg-[#FFFBEB] min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50 nav-transition">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-2xl font-bold text-[#2E8B57]">Napastry</h1>
+                    </div>
+                    <div class="hidden md:ml-6 md:flex md:space-x-8">
+                        <a href="#home" class="text-gray-600 hover:text-[#2E8B57] px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="#produk" class="text-gray-600 hover:text-[#2E8B57] px-3 py-2 rounded-md text-sm font-medium transition-colors">Produk</a>
+                        <a href="#tentang" class="text-gray-600 hover:text-[#2E8B57] px-3 py-2 rounded-md text-sm font-medium transition-colors">Tentang</a>
+                        <a href="#kontak" class="text-gray-600 hover:text-[#2E8B57] px-3 py-2 rounded-md text-sm font-medium transition-colors">Kontak</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button type="button" class="text-gray-600 hover:text-[#2E8B57]" onclick="toggleMenu()">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 text-gray-600 hover:text-[#2E8B57]">Home</a>
+                <a href="#produk" class="block px-3 py-2 text-gray-600 hover:text-[#2E8B57]">Produk</a>
+                <a href="#tentang" class="block px-3 py-2 text-gray-600 hover:text-[#2E8B57]">Tentang</a>
+                <a href="#kontak" class="block px-3 py-2 text-gray-600 hover:text-[#2E8B57]">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-16 bg-gradient-to-br from-[#FFFBEB] to-[#FEF3C7] min-h-screen flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-6xl font-bold text-[#2E8B57] mb-6">Napastry</h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 mb-8">Fresh &amp; Sweet Pastry with Pineapple</h2>
+                    <p class="text-gray-600 text-lg mb-8">
+                        Nikmati kelezatan pastry premium dengan sentuhan segar nanas pilihan. Setiap gigitan adalah perjalanan rasa yang tak terlupakan.
+                    </p>
+                    <a href="https://wa.me/6282118538027?text=Halo%20Napastry%2C%20saya%20ingin%20memesan%20Pastry%20Nanas%20by%20Napastry." target="_blank" rel="noopener" class="inline-block bg-[#2E8B57] hover:bg-[#2E8B57]/90 text-white font-semibold py-3 px-8 rounded-full btn-hover shadow-lg transition-colors">
+                        Pesan Sekarang
+                    </a>
+                </div>
+                <div class="relative">
+                    <div class="floating">
+                        <img
+                            src="img/WhatsApp Image 2025-09-02 at 21.44.55_f948a7f8.jpg"
+                            alt="Fresh pineapple pastry with golden crust and pineapple filling on a ceramic plate with decorative background"
+                            class="rounded-2xl shadow-2xl border-8 border-white"
+                        />
+                    </div>
+                    <div class="absolute -top-4 -right-4 bg-yellow-100 rounded-full p-4 shadow-lg">
+                        <svg class="w-12 h-12 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produk Section -->
+    <section id="produk" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#2E8B57] mb-4">Produk Kami</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    Temukan kelezatan pastry spesial dengan rasa nanas yang segar dan menggugah selera.
+                </p>
+            </div>
+
+            <div class="flex justify-center">
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden card-hover max-w-md w-full">
+                    <div class="h-48 overflow-hidden">
+                        <img
+                            src="img/gambar_1.jpg"
+                            alt="Pastry Nanas dengan tampilan golden brown, isian nanas segar, dan taburan gula bubuk di atasnya"
+                            class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-300"
+                        />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Pastry Nanas by Napastry</h3>
+                        <p class="text-gray-600 mb-4">
+                            Pastry premium dengan isian nanas segar pilihan, dibungkus dengan adonan yang renyah dan manis sempurna.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-[#2E8B57]">Rp 10.000</span>
+                            <a href="https://wa.me/6282118538027?text=Saya%20ingin%20memesan%20Pastry%20Nanas%20by%20Napastry." target="_blank" rel="noopener" class="bg-yellow-400 hover:bg-yellow-500 text-white font-semibold py-2 px-4 rounded-full transition-colors btn-hover">
+                                Beli Sekarang
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang Kami -->
+    <section id="tentang" class="py-20 bg-gradient-to-br from-[#FEF3C7] to-[#FFFBEB]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img
+                        src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/5f22144f-3233-456b-9851-6710c0c908be.png"
+                        alt="Interior of modern bakery with wooden shelves displaying pineapple pastries and baked goods"
+                        class="rounded-2xl shadow-xl"
+                    />
+                </div>
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#2E8B57] mb-6">Tentang Napastry</h2>
+                    <p class="text-gray-700 text-lg mb-4">
+                        Napastry lahir dari kecintaan akan pastry berkualitas tinggi dan keinginan untuk menciptakan sesuatu yang unik. Kami memadukan teknik pastry tradisional dengan inovasi rasa nanas yang segar.
+                    </p>
+                    <p class="text-gray-700 text-lg mb-6">
+                        Setiap produk kami dibuat dengan bahan-bahan pilihan terbaik dan nanas segar yang dipilih dengan teliti. Komitmen kami adalah memberikan pengalaman kuliner yang tak terlupakan dalam setiap gigitan.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <span class="text-gray-700">Bahan-bahan premium dan segar</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <span class="text-gray-700">Dibuat dengan sepenuh hati</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <span class="text-gray-700">Tanpa pengawet dan bahan kimia berbahaya</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak -->
+    <section id="kontak" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#2E8B57] mb-4">Hubungi Kami</h2>
+                <p class="text-gray-600 text-lg">Pesan pastry favoritmu atau tanyakan informasi lebih lanjut</p>
+            </div>
+
+            <div class="bg-gradient-to-br from-[#FFFBEB] to-[#FEF3C7] rounded-2xl p-8 shadow-lg">
+                <form class="space-y-6" onsubmit="return submitForm(event)">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Nama Lengkap</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-colors" placeholder="Masukkan nama Anda" />
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-colors" placeholder="email@contoh.com" />
+                        </div>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Pesan</label>
+                        <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-colors" placeholder="Tulis pesan Anda di sini..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-[#2E8B57] hover:bg-[#2E8B57]/90 text-white font-semibold py-3 px-6 rounded-lg btn-hover">
+                        Kirim Pesan
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#2E8B57] text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h3 class="text-xl font-bold mb-4">Napastry</h3>
+                <p class="text-yellow-100 mb-4">Fresh &amp; Sweet Pastry with Pineapple</p>
+                <p class="text-yellow-100 text-sm">© 2024 Napastry. All rights reserved.</p>
+            </div>
+        </div>
+   
